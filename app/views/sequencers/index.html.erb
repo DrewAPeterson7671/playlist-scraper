@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sequencers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sequencer name</th>
+      <th>Draft</th>
+      <th>Sequence position</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sequencers.each do |sequencer| %>
+      <tr>
+        <td><%= sequencer.sequencer_name %></td>
+        <td><%= sequencer.draft_id %></td>
+        <td><%= sequencer.sequence_position %></td>
+        <td><%= link_to 'Show', sequencer %></td>
+        <td><%= link_to 'Edit', edit_sequencer_path(sequencer) %></td>
+        <td><%= link_to 'Destroy', sequencer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sequencer', new_sequencer_path %>

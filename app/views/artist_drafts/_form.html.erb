@@ -1,0 +1,32 @@
+<%= form_with(model: artist_draft, local: true) do |form| %>
+  <% if artist_draft.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(artist_draft.errors.count, "error") %> prohibited this artist_draft from being saved:</h2>
+
+      <ul>
+      <% artist_draft.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :draft_name %>
+    <%= form.text_field :draft_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :draft_genre %>
+    <%= form.text_field :draft_genre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :artist_id %>
+    <%= form.text_field :artist_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

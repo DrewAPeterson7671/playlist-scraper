@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Album list name:</strong>
+  <%= @album_list.album_list_name %>
+</p>
+
+<p>
+  <strong>Album:</strong>
+  <%= @album_list.album_id %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @album_list.artist_id %>
+</p>
+
+<p>
+  <strong>Album position:</strong>
+  <%= @album_list.album_position %>
+</p>
+
+<p>
+  <strong>List source:</strong>
+  <%= @album_list.list_source %>
+</p>
+
+<%= link_to 'Edit', edit_album_list_path(@album_list) %> |
+<%= link_to 'Back', album_lists_path %>

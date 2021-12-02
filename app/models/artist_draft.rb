@@ -1,0 +1,2 @@
+class ArtistDraft < ApplicationRecord
+end
