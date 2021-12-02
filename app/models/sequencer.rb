@@ -1,0 +1,2 @@
+class Sequencer < ApplicationRecord
+end

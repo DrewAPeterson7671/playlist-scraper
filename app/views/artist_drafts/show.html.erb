@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Draft name:</strong>
+  <%= @artist_draft.draft_name %>
+</p>
+
+<p>
+  <strong>Draft genre:</strong>
+  <%= @artist_draft.draft_genre %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @artist_draft.artist_id %>
+</p>
+
+<%= link_to 'Edit', edit_artist_draft_path(@artist_draft) %> |
+<%= link_to 'Back', artist_drafts_path %>
